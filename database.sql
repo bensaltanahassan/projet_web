@@ -47,11 +47,11 @@ CREATE TABLE IF NOT EXISTS `database`.`orders`
 CREATE TABLE IF NOT EXISTS `database`.`historique_des_achats` (
     id_historique INT AUTO_INCREMENT PRIMARY KEY,
     id_user INT NOT NULL,
-    id_order  INT NOT NULL,
+    id_product  INT NOT NULL,
     date_achat DATETIME NOT NULL,
     montant_total DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (id_user) REFERENCES users(id_user),
-    FOREIGN KEY (id_order ) REFERENCES orders(id_order )
+    FOREIGN KEY (id_product ) REFERENCES product(id_product )
 );
 -- REMPLISSAGE
 
