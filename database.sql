@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `database`.`card`
  `is_confirmed` BOOLEAN NOT NULL DEFAULT FALSE
 );
 
-CREATE TABLE IF NOT EXISTS `database`.`order` 
+CREATE TABLE IF NOT EXISTS `database`.`orders` 
 (`id_order` INT NOT NULL AUTO_INCREMENT primary key, 
  `id_card` INT NOT NULL,
  FOREIGN KEY (`id_card`) REFERENCES card(id_card),
@@ -52,7 +52,7 @@ CREATE TABLE historique_des_achats (
     quantite INT NOT NULL,
     montant_total DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (id_user) REFERENCES users(id_user),
-    FOREIGN KEY (id_order ) REFERENCES order(id_order )
+    FOREIGN KEY (id_order ) REFERENCES orders(id_order )
 );
 -- REMPLISSAGE
 
