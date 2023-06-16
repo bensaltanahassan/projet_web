@@ -44,13 +44,16 @@ CREATE TABLE IF NOT EXISTS `database`.`order`
  `quantity` INT NOT NULL,
  `date_order` DATE DEFAULT CURRENT_TIMESTAMP 
 );
-CREATE TABLE historique_achats ( 
- id INT AUTO_INCREMENT PRIMARY KEY, 
- id_user INT NOT NULL, 
- date_achat DATETIME NOT NULL, 
- montant_total DECIMAL(10, 2) NOT NULL, 
- FOREIGN KEY (id_user) REFERENCES users(id_user) 
- );
+CREATE TABLE historique_des_achats (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    id_product  INT NOT NULL,
+    date_achat DATETIME NOT NULL,
+    quantite INT NOT NULL,
+    montant_total DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (id_user) REFERENCES users(id_user),
+    FOREIGN KEY (id_product ) REFERENCES product(id_product )
+);
 -- REMPLISSAGE
 
 INSERT INTO `database`.`category` (`type`, `desc`) VALUES
