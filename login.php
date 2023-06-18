@@ -6,7 +6,7 @@ session_start();
 $erreur = "";
 $erreur0 = $erreur1 = '';
 if (isset($valider)) {
-  include("connect.php");
+  
   include("connexion.php");
   $sel = $pdo->prepare("SELECT * FROM users WHERE email = ? AND pass = ? LIMIT 1");
   $sel->execute([$email, $pass]);
