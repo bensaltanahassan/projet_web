@@ -45,12 +45,12 @@ CREATE TABLE IF NOT EXISTS `database`.`orders`
  `date_order` DATE DEFAULT CURRENT_TIMESTAMP 
 );
 CREATE TABLE IF NOT EXISTS `database`.`historique_des_achats` (
-    id_historique INT AUTO_INCREMENT PRIMARY KEY,
-    id_user INT NOT NULL,
-    id_product  INT NOT NULL,
-    date_achat DATETIME current NOT NULL,
-    quantite INT NOT NULL,
-    montant_total DECIMAL(10, 2) NOT NULL,
+    `id_historique` INT AUTO_INCREMENT PRIMARY KEY,
+    `id_user` INT NOT NULL,
+    `id_product`  INT NOT NULL,
+    `date_achat` DATETIME NOT NULL,
+    `quantite` INT NOT NULL,
+    `montant_total` DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (id_user) REFERENCES users(id_user),
     FOREIGN KEY (id_product ) REFERENCES product(id_product )
 );
