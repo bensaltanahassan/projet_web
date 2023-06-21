@@ -73,6 +73,10 @@ if (isset($_POST['valider'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shop</title>
      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
      <title>Ma Boutique - Accueil</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -119,19 +123,35 @@ if (isset($_POST['valider'])) {
   background-color: orangered;
   border-color: orangered;
 }
+.container-fluid {
+  position:fixed;
+  background-color: #252525;
+}
+.navbar-header {
+  background-color: #252525;
+}
+.navbar-inverse .navbar-brand {
+    color: whitesmoke;
+}
+.navbar-inverse .navbar-brand:hover{
+    color: #f26522;
+}
     </style>
 </head>
 <body>
     <!-- afficher le nombre de produit dans le panier -->
-     
-      <?php  //if(isset($_SESSION['num_produits'])){
-        //  $num=$_SESSION['num_product'];
-         
-         $num = isset($_SESSION['num_product']) ? $_SESSION['num_product'] : 0;
-        
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="active"><a class="navbar-brand" href="panier.php" style="position:right;margin-left:-600px;font-size:20px;">Panier</a></div>
+    </div>
+  </div>
+</nav>
+      <?php  
+       $num = isset($_SESSION['num_product']) ? $_SESSION['num_product'] : 0;
       ?>
 
-        <a href="panier.php" class="ajouter">Panier<span><?php echo $num?></span></a>
+        <!-- <a href="panier.php" class="ajouter">Panier<span><?php echo $num?></span></a> -->
     
     <!-- <section class="products_list"> -->
       <?php
@@ -142,9 +162,9 @@ if (isset($_POST['valider'])) {
     //verifier la connexion
   
     ?>
-    <div class="container mt-4" style="display:inline-block;">
+    <!-- <div class="container mt-4" style="display:inline-block;"> -->
         
-        <div class="row">
+        <!-- <div class="row"> -->
           <?php
       $req=mysqli_query($conn,"SELECT * FROM  product ");
       while($row=mysqli_fetch_assoc($req)) {
