@@ -6,11 +6,52 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>shop</title>
      <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-     
+     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+     <style>
+        body{
+            background-color:whitesmoke;
+        }
+        tr,td,th{
+            border:1px solid black;
+        }
+        th{
+            background-color:#ebebeb;
+        }
+        table{
+            width:80%;
+        }
+        .container-fluid {
+  background-color: #252525;
+  position:fixed;
+}
+.navbar-header {
+  background-color: #252525;
+}
+.navbar-inverse .navbar-brand {
+    color: whitesmoke;
+}
+.navbar-inverse .navbar-brand:hover{
+    color: #f26522;
+}
+     </style>
  </head>
- <body class="panier">
-     <a href="acc.php" class="ajouter">Boutique</a>
+ <body style="background-color:#dbb02f;overflow:visible;height:100%" >
+
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="active"><a class="navbar-brand" href="index.php">Boutique</a></div>
+    </div>
+  </div>
+</nav>
+<div class="panier" style="margin-top:100px;margin-bottom:20px">
+
+     
+                     
   <?php
 session_start();
 include "connect.php";
@@ -61,13 +102,11 @@ if ($result && mysqli_num_rows($result) > 0) {
     <tr>
         <td colspan="4">Aucun produit dans le panier</td>
     </tr>
-  
+</div>
     
     <?php
 }
 
 
 ?>
-
-
 
