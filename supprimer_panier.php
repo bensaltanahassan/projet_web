@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once "connexion.php";
+include_once "connect.php";
 
 
 $idhistorique=$_GET['histo'];
