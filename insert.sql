@@ -3,7 +3,7 @@ INSERT INTO `database`.`product` (`image`, `name`, `desc`, `price`, `stock`, `id
 ('robe_2.jpg', 'Robe longue bohème', 'Une élégante robe longue bohème avec des motifs colorés et un style décontracté. Idéale pour les soirées d été.', 49.99, 8, 1),
 ('robe_3.jpg', 'Robe sans manches en lin', 'Une robe sans manches en lin avec une coupe fluide et légère. Parfaite pour rester fraîche et élégante en été.', 34.99, 15, 1),
 ('robe_4.jpg', 'Robe midi à pois', 'Une robe midi élégante avec un motif à pois et une ceinture ajustable. Parfaite pour les occasions spéciales.', 54.99, 5, 1),
-('robe_5.jpg', 'Robe d'été à volants', 'Une robe d'été légère avec des volants et une coupe décontractée. Parfaite pour les journées chaudes à la plage.', 29.99, 12, 1);
+('robe_5.jpg', 'Robe d été à volants', 'Une robe d été légère avec des volants et une coupe décontractée. Parfaite pour les journées chaudes à la plage.', 29.99, 12, 1);
 
 INSERT INTO `database`.`product` (`image`, `name`, `desc`, `price`, `stock`, `id_category`) VALUES
 ('tshirthomme_1.jpg', 'T-shirt en coton uni', 'Un t-shirt en coton uni, confortable et polyvalent. Parfait pour un look décontracté au quotidien.', 24.99, 15, 2),
